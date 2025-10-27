@@ -1,0 +1,30 @@
+MINI VCS SYSTEM - HOW TO USE
+============================
+
+QUICK START:
+1. Open PowerShell in this folder
+2. Type: .\MiniVCS.exe
+3. Choose option 2 to add/edit files (already initialized)
+4. Choose option 3 to commit changes
+5. Choose option 4 to view history
+
+FEATURES:
+- File creation and editing with content preview
+- Commit system with messages and timestamps
+- Complete commit history viewing
+- Version revert functionality
+- File content viewing with line numbers
+- Version comparison between commits
+
+YOUR DATA:
+- All your repositories are saved in the 'data' folder
+- Commits are automatically loaded when you start the program
+- Your work is persistent across sessions
+
+CONTROLS:
+- Use number keys to select menu options
+- Follow the prompts for file editing
+- Press Enter to continue after operations
+- Choose option 0 to exit
+
+That's it! Your VCS system is ready to use.
