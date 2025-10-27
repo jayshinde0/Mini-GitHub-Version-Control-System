@@ -190,7 +190,11 @@ private:
         std::cout << "|                    MINI VCS SYSTEM                        |" << std::endl;
         std::cout << "+============================================================+" << std::endl;
         
-        if (repoManager.hasCurrentRepo()) {
+        if (firstRun) {
+            std::cout << "Welcome! Please select a repository to work with." << std::endl;
+            std::cout << "Current Repository: [NONE SELECTED]" << std::endl;
+            firstRun = false;
+        } else if (repoManager.hasCurrentRepo()) {
             std::cout << "Current Repository: [" << repoManager.getCurrentRepoName() << "]" << std::endl;
             Repository* repo = repoManager.getCurrentRepository();
             if (repo && repo->isInitialized()) {
