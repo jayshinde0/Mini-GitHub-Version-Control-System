@@ -1,0 +1,17 @@
+VERSION_ID:1
+MESSAGE:Initial web project
+TIMESTAMP:2025-10-27 20:49:54
+FILES_COUNT:1
+FILE_START:index.html
+CONTENT_LENGTH:121
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Project</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>
+
+FILE_END

@@ -4,10 +4,17 @@
 #include <direct.h>
 #include <sys/stat.h>
 
-FileHandler::FileHandler() {
+FileHandler::FileHandler() : dataPath("data") {
+}
+
+FileHandler::FileHandler(const std::string& path) : dataPath(path) {
 }
 
 FileHandler::~FileHandler() {
+}
+
+void FileHandler::setDataPath(const std::string& path) {
+    dataPath = path;
 }
 
 bool FileHandler::createDirectory(const std::string& path) {
@@ -198,11 +205,11 @@ std::string FileHandler::loadFileContent(const std::string& filename) {
 }
 
 std::string FileHandler::getCommitFilePath(int versionId) {
-    return "data/commits/commit_" + std::to_string(versionId) + ".txt";
+    return dataPath + "/commits/commit_" + std::to_string(versionId) + ".txt";
 }
 
 std::string FileHandler::getMetadataFilePath() {
-    return "data/repo_metadata.txt";
+    return dataPath + "/repo_metadata.txt";
 }
 
 bool FileHandler::fileExists(const std::string& path) {

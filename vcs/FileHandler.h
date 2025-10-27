@@ -7,9 +7,16 @@
 #include <fstream>
 
 class FileHandler {
+private:
+    std::string dataPath;
+    
 public:
     FileHandler();
+    FileHandler(const std::string& path);
     ~FileHandler();
+    
+    // Path management
+    void setDataPath(const std::string& path);
     
     // Directory operations
     bool createDirectory(const std::string& path);

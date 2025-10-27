@@ -1,0 +1,15 @@
+VERSION_ID:1
+MESSAGE:Initial C++ game
+TIMESTAMP:2025-10-27 20:49:54
+FILES_COUNT:1
+FILE_START:game.cpp
+CONTENT_LENGTH:112
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "C++ Game Started!" << endl;
+    return 0;
+}
+
+FILE_END

@@ -1,25 +1,30 @@
-MINI VCS SYSTEM - HOW TO USE
-============================
+MINI VCS SYSTEM WITH REPOSITORY MANAGEMENT - HOW TO USE
+======================================================
 
 QUICK START:
 1. Open PowerShell in this folder
 2. Type: .\MiniVCS.exe
-3. Choose option 2 to add/edit files (already initialized)
-4. Choose option 3 to commit changes
-5. Choose option 4 to view history
+3. Choose option 1 to manage repositories
+4. Create a new repository (like "my-project")
+5. Initialize the repository
+6. Add files, commit changes, view history
 
 FEATURES:
+- Multiple repository management (like GitHub)
+- Create, switch, and delete repositories
 - File creation and editing with content preview
 - Commit system with messages and timestamps
-- Complete commit history viewing
+- Complete commit history viewing per repository
 - Version revert functionality
 - File content viewing with line numbers
 - Version comparison between commits
 
 YOUR DATA:
-- All your repositories are saved in the 'data' folder
-- Commits are automatically loaded when you start the program
+- Each repository is saved in its own folder under 'repos/'
+- Repository list is saved in 'repositories.txt'
+- Commits are automatically loaded when you switch repositories
 - Your work is persistent across sessions
+- Each repository has its own commit history and files
 
 CONTROLS:
 - Use number keys to select menu options

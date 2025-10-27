@@ -16,10 +16,15 @@ private:
     FileHandler fileHandler;
     int nextVersionId;
     bool initialized;
+    std::string dataPath;   // Path to repository data folder
     
 public:
     Repository();
+    Repository(const std::string& repoDataPath);
     ~Repository();
+    
+    // Repository path management
+    void setDataPath(const std::string& path);
     
     // Core VCS operations
     bool initializeRepo();

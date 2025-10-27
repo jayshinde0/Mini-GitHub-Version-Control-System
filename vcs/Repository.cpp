@@ -3,7 +3,17 @@
 #include <algorithm>
 
 Repository::Repository() 
-    : head(nullptr), current(nullptr), nextVersionId(1), initialized(false) {
+    : head(nullptr), current(nullptr), nextVersionId(1), initialized(false), dataPath("data") {
+}
+
+Repository::Repository(const std::string& repoDataPath) 
+    : head(nullptr), current(nullptr), nextVersionId(1), initialized(false), dataPath(repoDataPath) {
+    fileHandler.setDataPath(repoDataPath);
+}
+
+void Repository::setDataPath(const std::string& path) {
+    dataPath = path;
+    fileHandler.setDataPath(path);
 }
 
 Repository::~Repository() {
@@ -23,8 +33,8 @@ bool Repository::initializeRepo() {
     initialized = true;
     
     // Create data directory structure
-    fileHandler.createDirectory("data");
-    fileHandler.createDirectory("data/commits");
+    fileHandler.createDirectory(dataPath);
+    fileHandler.createDirectory(dataPath + "/commits");
     
     return saveRepository();
 }
